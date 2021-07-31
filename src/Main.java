@@ -6,7 +6,7 @@ public class Main {
     public static final void main(String[] args) {
         System.out.println(compareDogAndCat("1catdog"));
 //        System.out.println(returnMap("salt", "tea", "soda", "toast"));
-        System.out.println(returnWithoutSubstring("Helloxxx there", "xx"));
+        System.out.println(returnWithoutSubstring("Helloxxx there", "e"));
 
 
     }
@@ -45,12 +45,8 @@ public class Main {
 
     //    method for third task
     public static String returnWithoutSubstring(String base, String removeLine) {
-        boolean trying = true;
-        while (trying) {
+        while (base.contains(removeLine)) {
             base = base.replaceFirst(removeLine, "");
-            if (!base.contains(removeLine)) {
-                trying = false;
-            }
         }
         return base;
     }
